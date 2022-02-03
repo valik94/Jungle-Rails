@@ -4,6 +4,13 @@
     <h1>My Cart</h1>
   </header>
 
+    <% if enhanced_cart.count == 0 %>
+    <div class="alert alert-primary" role="alert">
+      The cart is empty!
+    <%= link_to "Please return to home page by clicking on this link", "/" %>
+    <% else %>
+    
+
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -11,7 +18,7 @@
           <th colspan="2">Product</th>
           <th>Unit Price</th>
           <th>Quantity</th>
-          <th>Price</th>
+          <th>$ Price</th>
         </tr>
       </thead>
       <tbody>
@@ -25,7 +32,7 @@
             TOTAL:
           </th>
           <th>
-            <%= cart_subtotal_cents / 100.0 %>
+            <%= Money.new(cart_subtotal_cents).format %>
           </th>
         </tr>
       </tfoot>
@@ -38,7 +45,7 @@
         <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-amount="<%= cart_subtotal_cents %>"
+          data-amount="<%= Money.new(cart_subtotal_cents).format %>"
           data-name="Jungle"
           data-description="Khurram Virani's Jungle Order"
           data-locale="auto"
@@ -48,5 +55,8 @@
       <% end %>
     </div>
   </div>
+
+
+<% end %>
 
 </section>
