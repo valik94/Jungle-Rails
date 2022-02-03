@@ -31,3 +31,14 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+MVC - Design or Architectural Pattern (used by rails) to make complex web applications
+Model talks to  => DB => through ActiveRecord (rails most popular library)
+View            => EJS Templates (in Node) => Ruby renders HTML (alternatives are slim)
+Controller      => Project Manager - responsible for making sure request is complete. Deals with user by fulfilling the request. 
+
+ERB templates - Embedded Ruby --> like EJS templates in Embedded Javascript
+
+ERB templates in views -> products folder -> .erb files mostly HTML with embedded ruby (i.e. @products.image, @product.name...)
+ 
+Look at rails server to see where templates are rendered.
