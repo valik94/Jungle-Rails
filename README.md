@@ -32,6 +32,8 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * PostgreSQL 9.x
 * Stripe
 
+
+## Notes
 MVC - Design or Architectural Pattern (used by rails) to make complex web applications
 Model talks to  => DB => through ActiveRecord (rails most popular library)
 View            => EJS Templates (in Node) => Ruby renders HTML (alternatives are slim)
