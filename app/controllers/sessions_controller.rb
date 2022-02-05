@@ -1,9 +1,9 @@
 # app/controllers/sessions_controller.rb
 
-class Admin::SessionsController < ApplicationController
+class SessionsController < ApplicationController
 
     
-    before_filter :authorize, except: [:new]
+    # before_filter :authorize, except: [:new]
 
     def new #this renders the new view
     end

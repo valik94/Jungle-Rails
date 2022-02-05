@@ -1,9 +1,10 @@
 # app/controllers/users_controller.rb
 
-class Admin::UsersController < ApplicationController
-    before_filter :authorize
-    
-    def new
+class UsersController < ApplicationController
+  # before_filter :authorize, except: [:new]
+  
+  def new
+      @user = User.new
     end
     
     def create
@@ -19,6 +20,6 @@ class Admin::UsersController < ApplicationController
 
 private
     def user_params
-        params.require(:user).permit(:name, :email, :password, :password_confirmation)
+        params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
     end
 end

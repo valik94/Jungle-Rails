@@ -4,21 +4,21 @@
 
 <%= form_for :user, url: '/users' do |f| %>
 
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
 
-<% end %>
-
-
-<h1>Login</h1>
-
-<%= form_tag '/login' do %>
-
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
+  <div class="col-sm-8">
+        <dl class="form-group">
+          <dt>FirstName:</dt>
+          <dd><%= f.text_field :first_name %></dd>
+          <dt>LastName:</dt>
+          <dd><%= f.text_field :last_name %></dd>
+          <dt>Email</dt>
+          <dd><%= f.text_field :email %></dd>
+          <dt>Password:</dt>
+          <dd><%= f.password_field :password %></dd>
+          <dt>Password Confirmation:</dt>
+          <dd><%= f.password_field :password_confirmation %></dd>
+          <%= f.submit "Submit" %> 
+        </dl>
+      </div>
 
 <% end %>
