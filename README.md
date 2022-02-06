@@ -44,3 +44,25 @@ ERB templates - Embedded Ruby --> like EJS templates in Embedded Javascript
 ERB templates in views -> products folder -> .erb files mostly HTML with embedded ruby (i.e. @products.image, @product.name...)
  
 Look at rails server to see where templates are rendered.
+
+## Implementing the following feature:
+## Storewide Sales
+Ability for admins to create sales which would mark everything in the sotre x% off, for a certain amount of time.
+They should be able to create sales date ranges.
+
+Examples:
+- Everything is 10% off for back-2-school (Aug 10 -> Sep 4)
+- Everthing is off 30% for Christmas Holidays (Dec 15 -> Jan 3)
+
+EDD - Error Driven Development
+
+### Technical Specifications:
+-ability for admins to create Sale records
+-name
+-percent_off
+-starts_on (date)
+-ends_on (date)
+
+2- Once any sale is active, display it on the products#index page (home page) and affect the prices
+
+EDD
