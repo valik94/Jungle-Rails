@@ -6,5 +6,33 @@ The total number of products is: <%=  @total_products %>
 </h2>
 <h2 class="dashboard">
 The total number of categories is: <%= @total_categories %>
-<%#= link_to 'categories', [:admin, :categories], class: 'btn btn-info' %>  
+<%= link_to 'categories', [:admin, :categories], class: 'btn btn-info' %>  
 </h2>
+
+<dl class="form-group">
+          <dt>The total number of products is:</dt>
+          <dd><%=  @total_products %></dd>
+          <dt><%= link_to 'Go to products page', [:admin, :products], class: 'btn btn-info' %></dt>
+          <dd><%#= product.description %></dd>
+          <dt>The total number of categories is:</dt>
+          <dd><%= @total_categories %></dd>
+          <dt><%= link_to 'Go to categories page', [:admin, :categories], class: 'btn btn-info' %></dt>
+          <dd><%#= Money.new(product.price).format %></dd>
+        </dl>
+
+
+<table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Total products</th>
+          <th><%=  @total_products %></th>
+          <th><%= link_to 'Go to products page', [:admin, :products], class: 'btn btn-info' %></th>
+        </tr>
+        <tr>
+          <th colspan="2">Total Categories</th>
+          <th><%= @total_categories %></th>
+          <th><%= link_to 'Go to categories page', [:admin, :categories], class: 'btn btn-info' %></th>
+        </tr>
+      </thead>
+
+    </table>
