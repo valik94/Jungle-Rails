@@ -11,4 +11,10 @@ class Sale < ActiveRecord::Base
     def active?
         !upcoming? && !finished? #if not upcoming and not finished then it must be active
     end
+
+    #ActiveRecord Scope creation to query Sales from DB to be used in sales_helper.rb
+    def self.active 
+        where("sales.starts_on <= ? AND sales.ends_on >= ?", 
+            Date.current, Date.current)
+    end
 end
