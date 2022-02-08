@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   # before_filter :authorize, except: [:new]
   
   def new
-      @user = User.new
+      # @user = User.new()
+      # byebug
     end
     
     def create
