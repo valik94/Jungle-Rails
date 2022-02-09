@@ -34,9 +34,11 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
     # page.find('article class=product').find_link(`href="/products/2"`).click
 
     # find('.actions').first(:link, "Details").click #ambiguous
-
     find('.product', match: :first).click_link("Details")
-    save_and_open_screenshot
+    sleep 2
+    save_and_open_screenshot "product_details.png"
+    product = find('.products-show')
+    expect(product).to have_css(".product-detail") #have_css method looks into the children css to find a match for the expect(parent) 
       
   end
 
