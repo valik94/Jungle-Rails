@@ -5,8 +5,8 @@ class SessionsController < ApplicationController
     
     # before_filter :authorize, except: [:new]
 
-    def new #this renders the new view
-    end
+    # def new #this renders the new view
+    # end
   
   def create
     if user = User.authenticate_with_credentials(params[:email], params[:password])

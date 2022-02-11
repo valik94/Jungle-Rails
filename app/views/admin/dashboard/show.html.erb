@@ -1,24 +1,7 @@
 <h1>Admin::Dashboard#show</h1>
 <p>Find me in app/views/admin/dashboard/show.html.erb</p>
-<h2 class="dashboard">
-The total number of products is: <%=  @total_products %>
-<%= link_to 'products', [:admin, :products], class: 'btn btn-info' %>
-</h2>
-<h2 class="dashboard">
-The total number of categories is: <%= @total_categories %>
-<%= link_to 'categories', [:admin, :categories], class: 'btn btn-info' %>  
-</h2>
 
-<dl class="form-group">
-          <dt>The total number of products is:</dt>
-          <dd><%=  @total_products %></dd>
-          <dt><%= link_to 'Go to products page', [:admin, :products], class: 'btn btn-info' %></dt>
-          <dd><%#= product.description %></dd>
-          <dt>The total number of categories is:</dt>
-          <dd><%= @total_categories %></dd>
-          <dt><%= link_to 'Go to categories page', [:admin, :categories], class: 'btn btn-info' %></dt>
-          <dd><%#= Money.new(product.price).format %></dd>
-        </dl>
+
 
 
 <table class="table table-bordered">
@@ -26,12 +9,19 @@ The total number of categories is: <%= @total_categories %>
         <tr>
           <th colspan="2">Total products</th>
           <th><%=  @total_products %></th>
-          <th><%= link_to 'Go to products page', [:admin, :products], class: 'btn btn-info' %></th>
+          <th><%= link_to 'Go to products page', [:admin, :products], class: 'btn btn-info' %>
+          </th>
         </tr>
         <tr>
           <th colspan="2">Total Categories</th>
           <th><%= @total_categories %></th>
-          <th><%= link_to 'Go to categories page', [:admin, :categories], class: 'btn btn-info' %></th>
+          <th><%= link_to 'Go to categories page', [:admin, :categories], class: 'btn btn-info' %>
+          </th>
+          </tr>
+          <tr>
+          <th colspan="2">Total Sales</th>
+          <th><%= @total_sales %></th>
+          <th><%= link_to 'Go to sales page', [:admin, :sales], class: 'btn btn-info' %></th>
         </tr>
       </thead>
 

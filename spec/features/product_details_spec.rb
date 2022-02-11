@@ -18,22 +18,6 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
     visit root_path 
     puts page.html
 
-    # page.find("btn btn-default pull-right").find_button('Details »').click #TESTED -->ERROR: Failure/Error: page.find("btn btn-default pull-right").find_button('Details »').click
-    # Capybara::ElementNotFound:
-    #   Unable to find css "btn btn-default pull-right"
-
-    # click_link('class="btn btn-default pull-right" href="/products/12">Details »') #ElementNotFound:
-
-    # page.find_button 'Details »'  #Unable to find button "Details »" that is not disabled
-
-    # page.find_link 'product'.click
-    # page.has_selector? :link, 'btn btn-default pull-right ', href: ‘/products/id’
-
-    # page.find('#btn-default pull-right').find_link(`Details »`).click
-
-    # page.find('article class=product').find_link(`href="/products/2"`).click
-
-    # find('.actions').first(:link, "Details").click #ambiguous
     find('.product', match: :first).click_link("Details")
     sleep 2
     save_and_open_screenshot "product_details.png"
