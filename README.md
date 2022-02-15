@@ -2,6 +2,15 @@
 ### Application Description
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+### App Functionality
+
+!["Admin Sales Creation"](https://github.com/valik94/Jungle-Rails/blob/master/docs/Admin%20Sales%20creation%20and%20table.gif)
+!["Admin-panel-functionality"](https://github.com/valik94/Jungle-Rails/blob/master/docs/Admin-panel-functionality.gif)
+!["Categories-dropdown-selection"](https://github.com/valik94/Jungle-Rails/blob/master/docs/categories-dropdown-selection.gif)
+!["Product-listings-addtocart-demo"](https://github.com/valik94/Jungle-Rails/blob/master/docs/categories-dropdown-selection.gif)
+!["Sold out products"](https://github.com/valik94/Jungle-Rails/blob/master/docs/sold%20out%20products.gif)
+!["New user-registration route"](https://github.com/valik94/Jungle-Rails/blob/master/docs/new-user%20registration%20route.gif)
+
 ## Additional Steps for Apple M1 Machines
 
 1. Make sure that you are runnning Ruby 2.6.6 (`ruby -v`)
