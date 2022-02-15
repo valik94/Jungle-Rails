@@ -62,7 +62,5 @@ EDD - Error Driven Development
 -percent_off
 -starts_on (date)
 -ends_on (date)
+- Once any sale is active, display it on the products#index page (home page) or any page and affect the prices
 
-2- Once any sale is active, display it on the products#index page (home page) or any page and affect the prices
-
-EDD
